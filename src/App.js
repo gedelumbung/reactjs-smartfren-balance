@@ -99,23 +99,29 @@ class App extends Component {
 }
 
 const MainItem = ({ item }) => {
-  return (
-    <tr>
-      <td>{item.benName}</td>
-      <td>{item.benAmount}</td>
-      <td>{item.benExpDate}</td>
-    </tr>
-  );
+  if (item.benAmount != 0) {
+    return (
+      <tr>
+        <td>{item.benName}</td>
+        <td>{item.benAmount}</td>
+        <td>{item.benExpDate}</td>
+      </tr>
+    );
+  }
+  return null;
 };
 
 const BonusItem = ({ item }) => {
-  return (
-    <tr>
-      <td>{item.bonusName}</td>
-      <td>{item.bonusBalance}</td>
-      <td>{item.packExpDate}</td>
-    </tr>
-  );
+  if (item.bonusBalance != 0) {
+    return (
+      <tr>
+        <td>{item.bonusName}</td>
+        <td>{item.bonusBalance}</td>
+        <td>{item.packExpDate}</td>
+      </tr>
+    );
+  }
+  return null;
 };
 
 export default App;
