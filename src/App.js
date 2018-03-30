@@ -34,9 +34,9 @@ class App extends Component {
       });
   };
 
-  requestBonus = sessionId => {
+  requestBonus = () => {
     return api()
-      .post("/get_bonus", { id: sessionId })
+      .post("/get_bonus", { idx: IDX })
       .then(response => {
         this.setState({
           bonus: response.data,
