@@ -103,7 +103,7 @@ const MainItem = ({ item }) => {
     return (
       <tr>
         <td>{item.benName}</td>
-        <td>{item.benAmount}</td>
+        <td>{item.benAmount.toLocaleString()} {item.desc}</td>
         <td>{item.benExpDate}</td>
       </tr>
     );
@@ -116,7 +116,7 @@ const BonusItem = ({ item }) => {
     return (
       <tr>
         <td>{item.bonusName}</td>
-        <td>{item.bonusBalance}</td>
+        <td>{item.bonusBalance.toLocaleString()} {item.bonusDesc}</td>
         <td>{item.packExpDate}</td>
       </tr>
     );
